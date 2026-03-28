@@ -1,11 +1,17 @@
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #00acdc;
+  --secondary-color: #fff;
+  --font-family: 'Roboto', sans-serif;
+}
+
 html {
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-family);
   font-size: 12px;
 }
 
@@ -20,13 +26,11 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
-  height: 60px;
+  background-color: var(--secondary-color);
   padding: 0 50px;
 }
 
 .nav {
-  text-decoration: none;
   display: flex;
 }
 
@@ -42,10 +46,6 @@ html {
   margin-left: 20px;
 }
 
-.nav-item:hover {
-  color: #00acdc;
-}
-
 .nav-link {
   display: flex;
   align-items: center;
@@ -54,13 +54,12 @@ html {
   text-decoration: none;
   color: #000;
   position: relative;
-  line-height: 60px;
   transition: color 0.3s;
 }
 
 .nav-link:hover,
 .nav-link.is-active {
-  color: #00acdc;
+  color: var(--primary-color);
 }
 
 .is-active::after {
@@ -72,7 +71,7 @@ html {
   height: 4px;
   width: 100%;
   position: absolute;
-  background-color: #00acdc;
+  background-color: var(--primary-color);
   border-radius: 2px;
 }
 
